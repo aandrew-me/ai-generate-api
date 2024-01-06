@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -113,7 +112,7 @@ func main() {
 
 	})
 
-	log.Fatal(app.Listen(port))
+	app.Listen(port)
 }
 
 func getImage(prompt string, model string, n int) (respose Output, err error) {
